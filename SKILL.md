@@ -12,7 +12,7 @@ Produce a complete, compilable Chinese LaTeX translation while preserving the so
 ## Non-negotiable rules
 
 - Lock one source PDF by absolute path, physical page count, visible date or version information, and SHA-256. Every subagent uses that file only.
-- Render every physical page to PNG at 200 dpi by default. Transcripe by directly viewing those page images.
+- Render every physical page to PNG at 200 dpi by default.  by directly viewing those page images.
 - Do not use the PDF text layer, `pdftotext`, OCR, or extracted text as a transcription source unless the user explicitly permits it.
 - Translate all titles, paragraphs, theorem-like objects, proofs, equations, lists, author footnotes, captions, bibliography-adjacent prose, symbol descriptions, and index material in source order.
 - Never summarize, compress, modernize, silently strengthen, or replace a proof. Chinese word order may change; hypotheses, quantifiers, logical strength, object order, symbols, numbering, and references may not.
