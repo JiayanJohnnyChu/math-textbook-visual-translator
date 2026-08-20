@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mathematical Textbook Visual Translator"
+  short_description: "Faithful page-by-page textbook translation to Chinese LaTeX"
+  default_prompt: "Use $math-textbook-visual-translator to translate this mathematical textbook PDF into a faithful Chinese LaTeX project."
