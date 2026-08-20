@@ -25,19 +25,16 @@ Do not modify `main.tex`, the shared preamble, global glossary, central `ERRATA.
 7. Call existing extracted figures. If an asset is missing, record the expected file, source page, and figure number; do not redraw it in TikZ.
 8. Run feasible isolated static checks or a chapter build. Do not run a full-book build concurrently from the shared project root.
 
-## QA deliverable
+## TeX-only QA deliverable
 
-Include at least one row for every physical source page:
+After completing the draft, inspect the resulting TeX from beginning to end without reopening every source-page image solely for QA. This is a structural and implementation review, not a second visual transcription pass. Do not create a page-by-page visual QA table for the translator.
 
-| Source physical page | Prose | Mathematics | Theorem/proof | Footnote/figure | Status |
-|---:|---|---|---|---|---|
+Record:
 
-Also record:
+- source-page marker coverage, including missing, duplicate, out-of-range, and intentionally blank pages;
+- chapter, section, numbered-equation, theorem-like object, proof, author-footnote, and figure inventories derived from the TeX;
+- unbalanced environments or delimiters, duplicate or unresolved labels, broken references, missing figure paths, malformed macros, and duplicate erratum IDs;
+- every erratum candidate, new terminology request, shared-macro request, and cross-chapter label not yet available;
+- static-check, isolated-build, compilation-warning, missing-glyph, and material-overflow status.
 
-- chapter, section, numbered-equation, theorem-like object, proof, author-footnote, and figure inventories;
-- every erratum candidate;
-- new terminology and shared-macro requests;
-- cross-chapter references and labels not yet available;
-- static-check, isolated-build, and compiled-output review status.
-
-Report completion only after every assigned source page has actually been viewed and committed to the chapter and QA record.
+Report completion only after every assigned source page has been viewed during transcription, all content has been committed to the chapter, and the TeX-only QA pass is complete. The independent reviewer owns the single exhaustive post-translation visual QA pass.
