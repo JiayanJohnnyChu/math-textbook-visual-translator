@@ -9,7 +9,7 @@ The workflow is designed for long-form mathematical material where formulas, pro
 - Transcribes directly from 200 dpi page images.
 - Does not use the PDF text layer, OCR, or extracted text unless the user explicitly permits it.
 - Assigns coherent whole chapters to chapter-scale subagents.
-- Requires independent page-by-page review by a subagent other than the original translator.
+- Uses a TeX-only self-QA pass by the translator and one independent page-by-page visual QA pass by another subagent.
 - Preserves proof structure, hypotheses, quantifiers, notation, numbering, and references.
 - Keeps source errors in the body and records proposed corrections in identified translator's notes.
 - Reuses extracted or cropped source figures instead of redrawing complex figures in TikZ.
