@@ -9,7 +9,7 @@ The workflow is designed for long-form mathematical material where formulas, pro
 - Transcribes directly from 200 dpi page images.
 - Does not use the PDF text layer, OCR, or extracted text unless the user explicitly permits it.
 - Assigns coherent whole chapters to chapter-scale subagents.
-- Uses a TeX-only self-QA pass by the translator and one independent page-by-page visual QA pass by another subagent.
+- Separates QA into one independent source-PDF-to-TeX content review and one final TeX-to-PDF rendering review, so each expensive visual comparison happens once.
 - Preserves proof structure, hypotheses, quantifiers, notation, numbering, and references.
 - Keeps source errors in the body and records proposed corrections in identified translator's notes.
 - Reuses extracted or cropped source figures instead of redrawing complex figures in TikZ.
@@ -57,7 +57,8 @@ The skill deliberately does not prescribe a fixed `main.tex`, preamble, engine, 
 - `SKILL.md` — core routing and workflow instructions.
 - `references/translation-contract.md` — fidelity, errata, figures, and layout rules.
 - `references/chapter-worker.md` — whole-chapter translation subagent contract.
-- `references/chapter-reviewer.md` — independent reviewer contract.
+- `references/chapter-reviewer.md` — independent source-to-TeX reviewer contract.
+- `references/final-output-reviewer.md` — exhaustive final TeX-to-PDF reviewer contract.
 - `scripts/render_source_pdf.py` — deterministic 200 dpi page rendering helper.
 - `scripts/check_page_coverage.py` — source-page marker coverage checker.
 - `agents/openai.yaml` — Codex interface metadata.
