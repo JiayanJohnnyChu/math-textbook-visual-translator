@@ -1,6 +1,6 @@
 # Independent Whole-Chapter Reviewer Contract
 
-The reviewer must not be the chapter's original translator. Reopen every assigned 200 dpi source page and inspect both the current chapter TeX and every page of the complete compiled Chinese chapter proof.
+The reviewer must not be the chapter's original translator. This reviewer performs the single dedicated post-translation visual QA pass: reopen every assigned 200 dpi source page and inspect both the current chapter TeX and every page of the complete compiled Chinese chapter proof.
 
 ## Review focus
 
