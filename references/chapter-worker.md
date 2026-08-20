@@ -23,11 +23,11 @@ Do not modify `main.tex`, the shared preamble, global glossary, central `ERRATA.
 5. Insert one clear `% SOURCE_PDF_PAGE: n` tracking marker for every physical page and record blank pages in QA.
 6. Preserve source errors in the body. Add a stable-ID `\SourceErratum` and record its source page and evidence in QA.
 7. Call existing extracted figures. If an asset is missing, record the expected file, source page, and figure number; do not redraw it in TikZ.
-8. Run feasible isolated static checks or a chapter build. Do not run a full-book build concurrently from the shared project root.
+8. Run feasible isolated static checks or a chapter build. Do not run a full-book build concurrently from the shared project root. Use targeted compiled smoke tests for new macros, complex mathematics, figures, footnotes, or other constructs whose rendering is not obvious from TeX.
 
 ## TeX-only QA deliverable
 
-After completing the draft, inspect the resulting TeX from beginning to end without reopening every source-page image solely for QA. This is a structural and implementation review, not a second visual transcription pass. Do not create a page-by-page visual QA table for the translator.
+After completing the draft, inspect the resulting TeX from beginning to end without reopening every source-page image solely for QA. This is a structural and implementation review, not a second visual transcription pass. Do not create a page-by-page visual QA table for the translator, and do not perform an exhaustive visual sweep of the provisional compiled chapter. The authoritative output-page review occurs only after content freeze and the final full build.
 
 Record:
 
@@ -37,4 +37,4 @@ Record:
 - every erratum candidate, new terminology request, shared-macro request, and cross-chapter label not yet available;
 - static-check, isolated-build, compilation-warning, missing-glyph, and material-overflow status.
 
-Report completion only after every assigned source page has been viewed during transcription, all content has been committed to the chapter, and the TeX-only QA pass is complete. The independent reviewer owns the single exhaustive post-translation visual QA pass.
+Report completion only after every assigned source page has been viewed during transcription, all content has been committed to the chapter, and the TeX-only QA pass is complete. A different reviewer owns the exhaustive source-to-TeX comparison; final-output reviewers later own the exhaustive final TeX-to-PDF comparison.
