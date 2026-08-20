@@ -52,6 +52,7 @@ calculation, this likely should read ... . The body retains the source form.
 
 - Prefer extraction of an independent vector Form/XObject, then vector cropping from the page content stream, and use a page screenshot only as a last resort.
 - Do not redraw complex figures, commutative diagrams, or schematics in TikZ. Existing English or mathematical labels may remain when the user permits it.
+- Render each recovered figure asset and visually compare it once with the figure on its source PDF page. Record crop, line, label, transparency, and completeness status in the figure manifest before content freeze.
 - Translate captions and all explanatory prose referring to figures.
 - Do not reproduce source line breaks or page breaks, and do not add forced page breaks corresponding to source pages.
 - Establish only a clear, stable, compilable baseline layout. Aesthetic redesign is outside this skill.
